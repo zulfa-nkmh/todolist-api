@@ -18,6 +18,7 @@ pids
 .env.*.local
 .env.local
 .env.test
+rest-client.env.json
 
 # Build output
 /dist

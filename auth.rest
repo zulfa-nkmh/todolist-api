@@ -1,9 +1,65 @@
+@host = http://localhost:5000
+@token = Bearer CHANGE_ME
+
 ### REGISTER USER
-POST http://localhost:5000/api/users/register
+POST {{host}}/api/users/register
 Content-Type: application/json
 
 {
-  "name": "nikmah",
-  "email": "nikmah@gmail.com",
+  "name": "yourname",
+  "email": "yourname@example.com",
   "password": "123456"
 }
+
+### LOGIN USER
+POST {{host}}/api/users/login
+Content-Type: application/json
+
+{
+  "email": "yourname@example.com",
+  "password": "123456"
+}
+
+### CREATE TODO
+POST {{host}}/api/todos
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "title": "Belajar Express",
+  "description": "Selesaikan API ToDoList"
+}
+
+### GET TODOS
+GET {{host}}/api/todos
+Authorization: {{token}}
+Content-Type: application/json
+
+### GET TODO BY ID
+GET {{host}}/api/todos/(id)
+Authorization: {{token}}
+Content-Type: application/json      
+
+### UPDATE TODO BY ID
+PUT {{host}}/api/todos/68f0dc0e35e54f9c3d9312ef
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "status": "done",
+  "title": "Belajar Express.js",
+  "description": "API sudah selesai!",
+  "completed": true
+}
+
+
+### DELETE TODO BY ID
+DELETE {{host}}/api/todos/(id)
+Authorization: {{token}}
+Content-Type: application/json   
+
+### DELETE ALL TODOS
+DELETE {{host}}/api/todos
+Authorization: {{token}}
+Content-Type: application/json  
+
