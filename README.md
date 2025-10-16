@@ -165,4 +165,4 @@ Base URL: `http://localhost:5000/api`
 ## Catatan penting
 - Pastikan JWT_SECRET dan MONGO_URI terisi di `.env`.
 - Middleware `protect` memastikan route todo hanya diakses pemilik token.
-- Untuk contoh request bisa gunakan file `auth.rest` (jika tersedia).
+- Untuk contoh request bisa gunakan file `auth.rest` (Bisa Menggunakan REST Client di VSC).
