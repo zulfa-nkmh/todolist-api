@@ -166,5 +166,3 @@ Base URL: `http://localhost:5000/api`
 - Pastikan JWT_SECRET dan MONGO_URI terisi di `.env`.
 - Middleware `protect` memastikan route todo hanya diakses pemilik token.
 - Untuk contoh request bisa gunakan file `auth.rest` (jika tersedia).
-
-Butuh contoh response lengkap atau file Postman/Insomnia export? Beri tahu endpoint mana.
